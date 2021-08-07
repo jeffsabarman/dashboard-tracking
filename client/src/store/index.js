@@ -41,6 +41,11 @@ export default new Vuex.Store({
         const message = err.response.data.message;
         Swal.fire(message, "", "error");
       }
+    },
+    logoutEvent(context) {
+      localStorage.clear();
+      router.push("/login");
+      Swal.fire("Successfully Logout", "", "success");
     }
   },
   modules: {}

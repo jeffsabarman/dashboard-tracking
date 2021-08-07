@@ -1,19 +1,29 @@
 <template>
   <div class="home">
-    <h1>INI HOME</h1>
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <div class="two-col">
+      <Sidebar></Sidebar>
+      <div class="dashboard-side">
+        <h1>INI dashboard</h1>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+// import HelloWorld from "@/components/HelloWorld.vue";
+import Sidebar from "../components/Sidebar.vue";
 
 export default {
   name: "Home",
   components: {
-    HelloWorld
+    Sidebar
   }
 };
 </script>
+
+<style scoped>
+.two-col {
+  display: flex;
+}
+</style>
