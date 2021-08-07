@@ -4,6 +4,7 @@ const { createToken } = require("../helper/jwt");
 
 class Controller {
   static async register(req, res) {
+    // console.log(req.body, "<< body");
     try {
       const newUser = await User.create({
         email: req.body.email,
@@ -21,6 +22,7 @@ class Controller {
   }
 
   static async login(req, res) {
+    // console.log(req.body, "<< req body login  ");
     try {
       const loginUser = await User.findOne({
         where: {
